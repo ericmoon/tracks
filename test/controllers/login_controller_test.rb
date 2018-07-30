@@ -49,7 +49,7 @@ class LoginControllerTest < ActionController::TestCase
   def test_logout
     login_as :admin_user
     get :logout
-    assert_nil(session['user_id'])
+    assert_nil (session['user_id'])
     assert_redirected_to login_url
   end
   
