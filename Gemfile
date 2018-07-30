@@ -70,7 +70,7 @@ group :test do
   gem "rails-dom-testing"
 
 
-  gem "factory_girl_rails"
+  gem "factory_bot_rails"
   gem "rspec-expectations"
   gem "database_cleaner"
   gem "mocha", :require => false
