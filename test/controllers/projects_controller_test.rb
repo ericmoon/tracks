@@ -96,7 +96,7 @@ class ProjectsControllerTest < ActionController::TestCase
         assert_select 'title', /.+/
         assert_select 'description' do
           assert_select_encoded do
-            assert_select 'p', /^\d+#{nbsp}actions\. Project is (active|hidden|completed)\.$/
+            assert_select 'p', "/^\d+#{nbsp}actions\. Project is (active|hidden|completed)\.$/"
           end
         end
         %w(guid link).each do |node|
