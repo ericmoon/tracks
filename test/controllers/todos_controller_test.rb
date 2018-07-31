@@ -397,7 +397,7 @@ class TodosControllerTest < ActionController::TestCase
     todo = users(:admin_user).todos.active.first
     context = users(:admin_user).contexts.first
 
-    assert_not_equal todo.context.id, context.id
+    assert_not_equal todo.context.id, context.id, "same context ids"
 
     xhr :post, :change_context, :id => todo.id, :todo=>{:context_id => context.id}, :_source_view=>"todo"
     assert assigns['context_changed'], "context should have changed"
